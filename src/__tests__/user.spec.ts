@@ -1,12 +1,7 @@
-import { jest } from '@jest/globals';
-import { type Request, type Response } from 'express';
 import UserController from '@/controllers/user';
 import usersModel from '@/models/user';
 
-interface User {
-  name: string;
-  descrition: string;
-}
+import { type Request, type Response } from 'express';
 
 describe('getAllUsers', () => {
   it('should return all users', () => {
@@ -16,7 +11,7 @@ describe('getAllUsers', () => {
       json: jest.fn(),
     } as unknown as Response;
 
-    usersModel.getUsers = jest.fn<() => User[]>().mockReturnValue([
+    usersModel.getUsers = jest.fn().mockReturnValue([
       { name: 'RulerChen', descrition: 'Author of this project' },
       { name: 'joshtu0627', descrition: 'Author of this project' },
     ]);
