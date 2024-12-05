@@ -9,7 +9,7 @@
     "build": "tsc && tsc-alias",
     "lint": "eslint ./src/**/*.ts --fix",
     "format": "prettier --write ./**/*.{ts,json}",
-    "test": "jest --coverage=true -w=1 --forceExit --detectOpenHandles --watchAll=false --testPathPattern=src/__tests__ --testPathIgnorePatterns=build",
+    "test": "jest --coverage=true -w=1 --forceExit --detectOpenHandles --watchAll=false --testPathPattern=tests --testPathIgnorePatterns=build",
     "swagger": "ts-node swagger.ts"
   },
   "keywords": [],
