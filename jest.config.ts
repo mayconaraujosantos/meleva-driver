@@ -15,7 +15,14 @@ const config: JestConfigWithTsJest = {
     '^(\\.{1,2}/.*)\\.js$': '$1',
     '@/(.*)': ['<rootDir>/src/$1'],
   },
-  roots: ['<rootDir>/src', '<rootDir>/tests'],
+  clearMocks: true,
+  collectCoverage: false,
+  roots: ['<rootDir>'],
+  testEnvironment: 'node',
+  testEnvironmentOptions: {
+    NODE_ENV: 'test',
+  },
+  coveragePathIgnorePatterns: ['<rootDir>/node_modules', '<rootDir>/src/types', '<rootDir>/src/index.ts'],
 };
 
 export default config;
