@@ -1,0 +1,12 @@
+{
+	"editor.fontFamily": "Cascadia Code",
+	"editor.fontLigatures": "'ss20'",
+	"editor.fontWeight": "600",
+	"editor.lineHeight": 30,
+	"editor.fontSize": 14,
+	"files.autoSave": "afterDelay",
+	"sonarlint.connectedMode.project": {
+		"connectionId": "mayconaraujosantos",
+		"projectKey": "mayconaraujosantos_meleva-driver"
+	}
+}
