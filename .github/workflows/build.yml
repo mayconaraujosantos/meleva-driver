@@ -19,9 +19,11 @@ jobs:
         with:
           node-version: '18'  # Adjust to your Node.js version
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install
+      - name: Build
+        run: pnpm run build
       - name: Run Tests
-        run: npm test --coverage
+        run: pnpm test --coverage
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:

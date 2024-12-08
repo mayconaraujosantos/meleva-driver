@@ -8,5 +8,8 @@
 	"sonarlint.connectedMode.project": {
 		"connectionId": "mayconaraujosantos",
 		"projectKey": "mayconaraujosantos_meleva-driver"
-	}
+	},
+	"cSpell.words": [
+		"sonarqube"
+	]
 }
