@@ -16,7 +16,8 @@ const config: JestConfigWithTsJest = {
     '@/(.*)': ['<rootDir>/src/$1'],
   },
   clearMocks: true,
-  collectCoverage: false,
+  collectCoverage: true,
+  coverageReporters: ['text', 'lcov', 'html'],
   roots: ['<rootDir>'],
   testEnvironment: 'node',
   testEnvironmentOptions: {
