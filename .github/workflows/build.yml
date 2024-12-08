@@ -19,9 +19,9 @@ jobs:
         with:
           node-version: '18'  # Adjust to your Node.js version
       - name: Install pnpm
-        uses: bahmutov/pnpm-action@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: '6.33.2'
+          version: 9
       - name: Install Dependencies
         run: pnpm install
       - name: Build
