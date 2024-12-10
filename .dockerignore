@@ -15,3 +15,26 @@ jest.config.js
 Dockerfile
 
 README.md
+
+.commitlintrc*
+.dockerignore
+.DS_Store
+.editorconfig
+.env*
+.eslintcache
+.eslintrc*
+.git
+.prettierrc*
+.vscode
+*.log
+*docker-compose*
+*Dockerfile*
+.docker
+coverage
+data
+dist
+LICENSE
+logs
+node_modules
+npm-debug.log
+README.md
