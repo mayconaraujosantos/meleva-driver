@@ -21,6 +21,7 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.1",
+    "jest-fetch-mock": "^3.0.3",
     "mongodb": "^6.11.0",
     "pg": "^8.13.1",
     "reflect-metadata": "^0.2.2",
