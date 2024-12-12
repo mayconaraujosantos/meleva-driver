@@ -1,13 +1,11 @@
+import { env } from '@/infra/config/env';
 import { GoogleMapsApiStatus, type GoogleMapsAPIResponse, type GoogleMapsRouteResponse } from '@/data/protocols/GoogleMapsProtocol';
 import GoogleMapsService from '@/infra/external-services/GoogleMapsService';
-import dotenv from 'dotenv';
 import fetchMock from 'jest-fetch-mock';
 
 fetchMock.enableMocks();
 
-dotenv.config();
-
-const GOOGLE_MAPS_KEY = process.env.GOOGLE_MAPS_API_KEY ?? '';
+const GOOGLE_MAPS_KEY = env.googleMapsApiKey;
 
 let googleMapsService: GoogleMapsService;
 
