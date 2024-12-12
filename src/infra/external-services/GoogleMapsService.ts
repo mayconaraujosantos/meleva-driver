@@ -5,6 +5,7 @@ import {
   type GoogleMapsRouteResponse,
 } from '@/data/protocols/GoogleMapsProtocol';
 import { ValidationError } from '@/presentation/errors/ValidationError';
+import { env } from '@/infra/config/env';
 
 export class GoogleMapsService implements GoogleMapsProtocol {
   handleGoogleMapsApiError(data: GoogleMapsAPIResponse): void {
@@ -20,7 +21,7 @@ export class GoogleMapsService implements GoogleMapsProtocol {
 
   private readonly GOOGLE_MAPS_ENDPOINT: string = 'https://maps.googleapis.com/maps/api/directions/json';
   private readonly METERS_TO_KILOMETERS: number = 1000;
-  private readonly GOOGLE_MAPS_KEY: string = process.env.GOOGLE_MAPS_API_KEY ?? '';
+  private readonly GOOGLE_MAPS_KEY: string = env.googleMapsApiKey;
 
   public async calculateRoute(origin: string, destination: string): Promise<GoogleMapsRouteResponse> {
     this.validateGoogleMapsKey(this.GOOGLE_MAPS_KEY);
