@@ -16,6 +16,11 @@ COPY package*.json ./
 RUN  npm ci --production
 COPY --from=base /app/build ./build
 
-EXPOSE 8000
+RUN addgroup -S nonroot \
+	&& adduser -S nonroot -G nonroot
+
+USER nonroot
+
+EXPOSE 8080
 
 CMD ["npm", "start"]
