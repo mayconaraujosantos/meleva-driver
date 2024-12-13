@@ -1,11 +1,9 @@
-import {
-  GoogleMapsApiStatus,
-  type GoogleMapsAPIResponse,
-  type GoogleMapsProtocol,
-  type GoogleMapsRouteResponse,
-} from '@/data/protocols/GoogleMapsProtocol';
-import { ValidationError } from '@/presentation/errors/ValidationError';
+import { type GoogleMapsProtocol } from '@/data/protocols/GoogleMapsProtocol';
+import { type GoogleMapsAPIResponse } from '@/data/protocols/google-maps/GoogleMapsAPIResponse';
+import { GoogleMapsApiStatus } from '@/data/protocols/google-maps/GoogleMapsApiStatus';
+import { type GoogleMapsRouteResponse } from '@/data/protocols/google-maps/GoogleMapsRouteResponse';
 import { env } from '@/infra/config/env';
+import { ValidationError } from '@/presentation/errors/ValidationError';
 
 export class GoogleMapsService implements GoogleMapsProtocol {
   handleGoogleMapsApiError(data: GoogleMapsAPIResponse): void {

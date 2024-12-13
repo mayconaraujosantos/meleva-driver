@@ -1,5 +1,7 @@
+import { type GoogleMapsAPIResponse } from '@/data/protocols/google-maps/GoogleMapsAPIResponse';
+import { GoogleMapsApiStatus } from '@/data/protocols/google-maps/GoogleMapsApiStatus';
+import { type GoogleMapsRouteResponse } from '@/data/protocols/google-maps/GoogleMapsRouteResponse';
 import { env } from '@/infra/config/env';
-import { GoogleMapsApiStatus, type GoogleMapsAPIResponse, type GoogleMapsRouteResponse } from '@/data/protocols/GoogleMapsProtocol';
 import GoogleMapsService from '@/infra/external-services/GoogleMapsService';
 import fetchMock from 'jest-fetch-mock';
 
